@@ -2,7 +2,7 @@
 
 namespace CryptoCoins.Migrations
 {
-    public partial class InitialCreation : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

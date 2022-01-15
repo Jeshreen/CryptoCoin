@@ -5985,24 +5985,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/balraj/.nuget/packages/": {}
+    "C:\\Users\\iTelaSoft-PC\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins/CryptoCoins/CryptoCoins.csproj",
+      "projectUniqueName": "D:\\MSC\\MSC\\CloudComputing\\CryptoCoin\\CryptoCoins\\CryptoCoins.csproj",
       "projectName": "CryptoCoins",
-      "projectPath": "/Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins/CryptoCoins/CryptoCoins.csproj",
-      "packagesPath": "/Users/balraj/.nuget/packages/",
-      "outputPath": "/Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins/CryptoCoins/obj/",
+      "projectPath": "D:\\MSC\\MSC\\CloudComputing\\CryptoCoin\\CryptoCoins\\CryptoCoins.csproj",
+      "packagesPath": "C:\\Users\\iTelaSoft-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\MSC\\MSC\\CloudComputing\\CryptoCoin\\CryptoCoins\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/balraj/.config/NuGet/NuGet.Config"
+        "C:\\Users\\iTelaSoft-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6058,7 +6067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   }
