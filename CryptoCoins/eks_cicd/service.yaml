@@ -2,17 +2,17 @@
 kind: Service
 metadata:
   labels:
-    app.kubernetes.io/name: crypto-coins
-    app.kubernetes.io/instance: crypto-coins-instance
+    app.kubernetes.io/name: crypto-coins-app
+    app.kubernetes.io/instance: crypto-coins-app-instance
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: crypto-coins
+  name: crypto-coins-app
 spec:
   selector:
-    app: crypto-coins
+    app: crypto-coins-app
   type: LoadBalancer
   ports:
    -  protocol: TCP
       port: 80
-      targetPort: 3000
+      targetPort: 3000s

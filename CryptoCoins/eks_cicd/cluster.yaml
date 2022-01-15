@@ -2,7 +2,7 @@
 kind: ClusterConfig
 
 metadata:
-  name: crypto-coins #cluster name
+  name: crypto-coins-app #cluster name
   region: us-east-1 #desired region
 
 nodeGroups:

@@ -2,8 +2,8 @@
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: crypto-coins
-    app.kubernetes.io/instance: crypto-coins-instance
+    app.kubernetes.io/name: crypto-coins-app
+    app.kubernetes.io/instance: crypto-coins-app-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
   name: crypto-coins-deployment
@@ -11,15 +11,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: crypto-coins
+      app: crypto-coins-app
   template:
     metadata:
       labels:
-        app: crypto-coins
+        app: crypto-coins-app
     spec:
       containers:
         - image: 613558758677.dkr.ecr.us-east-1.amazonaws.com/cryptocoins:latest
           imagePullPolicy: Always
-          name: crypto-coins
+          name: crypto-coins-app
           ports:
             - containerPort: 3000
