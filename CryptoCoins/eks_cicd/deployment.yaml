@@ -18,7 +18,7 @@ spec:
         app: crypto-coins
     spec:
       containers:
-        - image: 613558758677.dkr.ecr.us-east-1.amazonaws.com/cryptocoins:devt
+        - image: 613558758677.dkr.ecr.us-east-1.amazonaws.com/cryptocoins:latest
           imagePullPolicy: Always
           name: crypto-coins
           ports:

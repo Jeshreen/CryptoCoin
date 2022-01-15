@@ -1,29 +1,28 @@
 ﻿<Properties StartupConfiguration="{35E72428-02FD-44DA-9B7C-E7D2F592A91E}|Default">
   <MonoDevelop.Ide.ItemProperties.CryptoCoins PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CryptoCoins/Migrations/20220115093912_InitialCreation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CryptoCoins/Controllers/CryptoCoinsController.cs">
     <Files>
       <File FileName="CryptoCoins/Controllers/CryptoCoinsController.cs" Line="109" Column="1" />
-      <File FileName="CryptoCoins/Startup.cs" Line="63" Column="60" />
-      <File FileName="CryptoCoins/appsettings.json" Line="2" Column="98" />
-      <File FileName="CryptoCoins/Properties/launchSettings.json" Line="11" Column="16" />
-      <File FileName="CryptoCoins/Program.cs" Line="16" Column="1" />
-      <File FileName="CryptoCoins/eks_cicd/cluster.yaml" Line="8" Column="12" />
-      <File FileName="CryptoCoins/eks_cicd/deployment.yaml" Line="18" Column="23" />
-      <File FileName="CryptoCoins/eks_cicd/service.yaml" Line="16" Column="20" />
-      <File FileName="CryptoCoins/Migrations/20220115065945_InitialCreation.cs" Line="10" Column="24" />
-      <File FileName="CryptoCoins/Dockerfile" Line="1" Column="1" />
-      <File FileName="CryptoCoins/Migrations/20220115093912_InitialCreation.cs" Line="1" Column="1" />
+      <File FileName="CryptoCoins/Startup.cs" />
+      <File FileName="CryptoCoins/appsettings.json" />
+      <File FileName="CryptoCoins/Properties/launchSettings.json" />
+      <File FileName="CryptoCoins/Program.cs" />
+      <File FileName="CryptoCoins/eks_cicd/cluster.yaml" />
+      <File FileName="CryptoCoins/eks_cicd/deployment.yaml" />
+      <File FileName="CryptoCoins/eks_cicd/service.yaml" />
+      <File FileName="CryptoCoins/Dockerfile" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CryptoCoins" expanded="True">
             <Node name="CryptoCoins" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Entities" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20220115093912_InitialCreation.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CryptoCoinsController.cs" selected="True" />
               </Node>
+              <Node name="eks_cicd" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>
@@ -34,9 +33,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins/CryptoCoins/Controllers/CryptoCoinsController.cs" relfile="CryptoCoins/Controllers/CryptoCoinsController.cs" line="109" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
