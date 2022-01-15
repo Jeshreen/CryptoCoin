@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/instance: crypto-coins-app-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: crypto-coins-deployment
+  name: crypto-coins-app-deployment
 spec:
   replicas: 1
   selector:
