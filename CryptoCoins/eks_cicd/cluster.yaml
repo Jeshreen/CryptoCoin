@@ -2,7 +2,7 @@
 kind: ClusterConfig
 
 metadata:
-  name: cicd-demo #cluster name
+  name: crypto-coins #cluster name
   region: us-east-1 #desired region
 
 nodeGroups:
