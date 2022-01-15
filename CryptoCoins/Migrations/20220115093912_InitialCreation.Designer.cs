@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CryptoCoins.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220115065945_InitialCreation")]
+    [Migration("20220115093912_InitialCreation")]
     partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

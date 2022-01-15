@@ -92,5 +92,22 @@ namespace CryptoCoins.Controllers
                 return false;
             }
         }
+
+        //HealthCheck
+        [HttpGet("hc")]
+        public bool CheckHealth()
+        {
+            try
+            {
+                var coin = this._databaseContext.CryptoCoins.ToList();
+                
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                return false;
+            }
+        }
     }
 }
