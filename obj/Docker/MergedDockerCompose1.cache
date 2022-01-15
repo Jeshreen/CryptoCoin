@@ -1,0 +1,36 @@
+services:
+  cryptocoins:
+    build:
+      context: /Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins
+      dockerfile: CryptoCoins/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CryptoCoins
+      target: base
+    container_name: CryptoCoins
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: cryptocoins:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/CryptoCoins.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - /Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins/CryptoCoins:/app:rw
+    - /Users/balraj/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/balraj/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/balraj/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/balraj/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins:/src:rw
+version: '3.4'

@@ -1,0 +1,16 @@
+services:
+  cryptocoins:
+    build:
+      context: /Users/balraj/Documents/MSC/CloudComputing/Coursework/CryptoCoins
+      dockerfile: CryptoCoins/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: cryptocoins
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/balraj/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/balraj/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

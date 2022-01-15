@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cryptocoins:
+    image: ${DOCKER_REGISTRY-}cryptocoins
+    build:
+      context: .
+      dockerfile: CryptoCoins/Dockerfile
