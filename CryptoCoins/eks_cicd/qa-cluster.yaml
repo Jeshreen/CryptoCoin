@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: crypto-coins-app #cluster name
+  name: crypto-coins-qa-app #cluster name
   region: us-east-1 #desired region
 
 nodeGroups:
