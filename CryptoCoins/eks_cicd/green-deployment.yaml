@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: crypto-coins-app-green
+    app.kubernetes.io/instance: crypto-coins-app-instance
+    app.kubernetes.io/version: '1.0.0'
+    app.kubernetes.io/managed-by: kubectl
+  name: crypto-coins-app-green-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-coins-app-green
+  template:
+    metadata:
+      labels:
+        app: crypto-coins-app-green
+    spec:
+      containers:
+        - image: 939760206342.dkr.ecr.us-east-1.amazonaws.com/crypto-coins-app:latest
+          imagePullPolicy: Always
+          name: crypto-coins-app-green
+          ports:
+            - containerPort: 80
