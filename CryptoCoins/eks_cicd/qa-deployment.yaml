@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: crypto-coins-qa-app
+    app.kubernetes.io/instance: crypto-coins-qa-app-instance
+    app.kubernetes.io/version: '1.0.0'
+    app.kubernetes.io/managed-by: kubectl
+  name: crypto-coins-qa-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-coins-qa-app
+  template:
+    metadata:
+      labels:
+        app: crypto-coins-qa-app
+    spec:
+      containers:
+        - image: 613558758677.dkr.ecr.us-east-1.amazonaws.com/cryptocoins:latest
+          imagePullPolicy: Always
+          name: crypto-coins-qa-app
+          ports:
+            - containerPort: 80
