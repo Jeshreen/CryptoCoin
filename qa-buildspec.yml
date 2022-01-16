@@ -32,8 +32,5 @@ phases:
   build:
     commands:
       - echo QA environment
-      - QA_APP=$(kubectl get svc crypto-coins-qa-app -o=jsonpath='{.spec.selector.app}')
-      - echo $QA_APP
-      - kubectl get svc -o json
       - kubectl apply -f CryptoCoins/eks_cicd/qa-deployment.yaml
       - kubectl rollout restart -f CryptoCoins/eks_cicd/qa-deployment.yaml
