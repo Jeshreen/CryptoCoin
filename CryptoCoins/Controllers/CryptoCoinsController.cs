@@ -30,10 +30,14 @@ namespace CryptoCoins.Controllers
 
         // GET api/<CryptoCoins>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var coin = this._databaseContext.CryptoCoins.FirstOrDefault(c => c.CoinId == id);
-            return "value";
+            var coin = await this._databaseContext.CryptoCoins.FindAsync(id);
+            if(coin == null)
+            {
+                return NotFound();
+            }
+            return Ok(coin);
         }
 
         // POST api/<CryptoCoins>
