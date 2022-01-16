@@ -1,0 +1,38 @@
+version: 0.2
+run-as: root
+
+phases:
+
+  install:
+    commands:
+      - echo Installing app dependencies...
+      - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl   
+      - chmod +x ./kubectl
+      - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+      - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+      - source ~/.bashrc
+      - echo 'Check kubectl version'
+      - kubectl version --short --client
+      - chmod +x CryptoCoins/eks_cicd/prereqs.sh
+      - sh CryptoCoins/eks_cicd/prereqs.sh
+
+  pre_build:
+    commands:
+      - echo Logging in to Amazon EKS...
+      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
+      - echo check config 
+      - kubectl config view --minify
+      - echo check kubectl access
+      - kubectl get svc  
+
+  build:
+    commands:
+      - echo Green deployment change
+      - GREEN_APP=$(kubectl get svc crypto-coins-app-green -o=jsonpath='{.spec.selector.app}')
+      - BLUE_APP=$(kubectl get svc coinbase-blue -o=jsonpath='{.spec.selector.app}')
+      - echo $GREEN_APP
+      - kubectl patch svc coinbase-blue -p '{"spec":{"selector":{"app":"'${GREEN_APP}'"}}}'
+      - echo Blue deployment change
+      - echo $BLUE_APP
+      - kubectl patch svc crypto-coins-app-green -p '{"spec":{"selector":{"app":"'${BLUE_APP}'"}}}'
+      - kubectl get svc -o json

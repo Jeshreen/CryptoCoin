@@ -2,24 +2,22 @@
   <MonoDevelop.Ide.ItemProperties.CryptoCoins PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="CryptoCoins/Controllers/CryptoCoinsController.cs">
     <Files>
-      <File FileName="CryptoCoins/Controllers/CryptoCoinsController.cs" Line="109" Column="1" />
-      <File FileName="CryptoCoins/Startup.cs" />
-      <File FileName="CryptoCoins/appsettings.json" />
-      <File FileName="CryptoCoins/Properties/launchSettings.json" />
-      <File FileName="CryptoCoins/Program.cs" />
-      <File FileName="CryptoCoins/eks_cicd/cluster.yaml" />
-      <File FileName="CryptoCoins/eks_cicd/deployment.yaml" />
-      <File FileName="CryptoCoins/eks_cicd/service.yaml" />
-      <File FileName="CryptoCoins/Dockerfile" />
+      <File FileName="CryptoCoins/Controllers/CryptoCoinsController.cs" Line="35" Column="30" />
+      <File FileName="CryptoCoins/Startup.cs" Line="72" Column="13" />
+      <File FileName="CryptoCoins/appsettings.json" Line="2" Column="98" />
+      <File FileName="CryptoCoins/Properties/launchSettings.json" Line="11" Column="16" />
+      <File FileName="CryptoCoins/Program.cs" Line="17" Column="10" />
+      <File FileName="CryptoCoins/eks_cicd/cluster.yaml" Line="5" Column="22" />
+      <File FileName="CryptoCoins/eks_cicd/deployment.yaml" Line="1" Column="1" />
+      <File FileName="CryptoCoins/eks_cicd/service.yaml" Line="13" Column="26" />
+      <File FileName="CryptoCoins/Dockerfile" Line="20" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CryptoCoins" expanded="True">
+          <Node name="CryptoCoins" expanded="True" selected="True">
             <Node name="CryptoCoins" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CryptoCoinsController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="eks_cicd" expanded="True" />
               <Node name="Entities" expanded="True" />
               <Node name="Migrations" expanded="True" />
