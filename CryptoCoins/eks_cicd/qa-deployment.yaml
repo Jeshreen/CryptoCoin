@@ -18,7 +18,7 @@ spec:
         app: crypto-coins-qa-app
     spec:
       containers:
-        - image: 613558758677.dkr.ecr.us-east-1.amazonaws.com/cryptocoins:latest
+        - image: 939760206342.dkr.ecr.us-east-1.amazonaws.com/crypto-coins-app:latest
           imagePullPolicy: Always
           name: crypto-coins-qa-app
           ports:
